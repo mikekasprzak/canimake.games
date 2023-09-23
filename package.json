@@ -1,0 +1,19 @@
+{
+  "name": "canimake.games",
+  "module": "index.js",
+  "type": "module",
+  "dependencies": {
+    "preact": "^10.17.1"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "esbuild": "^0.19.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "esbuild src/app.js --loader:.js=jsx --bundle --sourcemap --minify --outdir=www",
+    "run": "esbuild src/app.js --loader:.js=jsx --bundle --sourcemap --minify --outdir=www --servedir=www"
+  }
+}
